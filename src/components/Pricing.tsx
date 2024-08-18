@@ -25,51 +25,29 @@ interface PricingProps {
 }
 
 const pricingList: PricingProps[] = [
+
   {
-    title: "Free",
-    popular: 0,
-    price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+    title: "AI-Powered CRM System",
+    popular: PopularPlanType.YES,
+    price: 688,
+    description: `Ready to turn your WhatsApp chaos into a well-oiled machine? Say hello to your new digital sidekick! Our AI-Powered CRM System is like having a super-smart assistant who never sleeps, never complains, and always remembers to follow up. It's time to kiss goodbye to missed messages, forgotten follow-ups, and that nagging feeling that you're drowning in a sea of chats. With our Team Inbox, you'll be sailing smooth seas, captain! 🚀💬`,
+    buttonText: "Start Your Chaos-Free Trial",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "Unlimited Users (Yep, invite the whole crew!)",
+      "Unlimited Messages (Chat till the cows come home)",
+      "Unlimited Follow-Up (Never forget a lead again)",
+      "Done For You Integration (We set it up, you take the credit)",
+      "Personal WhatsApp Connection (Your number, our superpowers)",
+      "Scan QR Code Integration (As easy as taking a selfie)",
+      "Unlimited Blast Messages (Spread the word like wildfire)",
+      "Export & Import Existing Contacts (Bring your friends, they're welcome)",
+      "View & Update Existing Conversations (Time travel not included)",
+      "Automated Follow-Up (Like a persistent puppy, but less annoying)",
+      "Chat-GPT 4.0 Answers (AI so smart, it might outsmart you)",
+      "Automated Booking System (Your 24/7 appointment ninja)",
     ],
   },
-  {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
-  {
-    title: "Enterprise",
-    popular: 0,
-    price: 40,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
-    benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
-  },
+
 ];
 
 export const Pricing = () => {
@@ -78,19 +56,14 @@ export const Pricing = () => {
       id="pricing"
       className="container py-24 sm:py-32"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
+      <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
+        Our{' '}
+        <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+           Offer
         </span>
-        Access
       </h2>
-      <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
-      </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div className="flex justify-center">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
@@ -103,25 +76,22 @@ export const Pricing = () => {
             <CardHeader>
               <CardTitle className="flex item-center justify-between">
                 {pricing.title}
-                {pricing.popular === PopularPlanType.YES ? (
-                  <Badge
-                    variant="secondary"
-                    className="text-sm text-primary"
-                  >
-                    Most popular
-                  </Badge>
-                ) : null}
+            
               </CardTitle>
+              
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
+                <span className="text-3xl font-bold">RM {pricing.price}</span>
                 <span className="text-muted-foreground"> /month</span>
               </div>
-
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
             <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+            <Button className="w-full" asChild>
+                <a href="https://web.jutasoftware.co/register" target="_blank" rel="noopener noreferrer">
+                  {pricing.buttonText}
+                </a>
+              </Button>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />

@@ -1,168 +1,63 @@
-import { LogoIcon } from "./Icons";
+import logo from "../assets/logo.png";
 
 export const Footer = () => {
   return (
-    <footer id="footer">
-      <hr className="w-11/12 mx-auto" />
-
-      <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
-        <div className="col-span-full xl:col-span-2">
-          <a
-            rel="noreferrer noopener"
-            href="/"
-            className="font-bold text-xl flex"
-          >
-            <LogoIcon />
-            ShadcnUI/React
-          </a>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Follow US</h3>
-          <div>
+    <footer id="footer" className="bg-muted/50">
+      <div className="container py-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
+          <div className="col-span-full xl:col-span-2">
             <a
               rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
+              href="/"
+              className="font-bold text-xl flex items-center"
             >
-              Github
+               <img src={logo} alt="Logo" className="w-12 h-12" />
+              Juta Teknologi
             </a>
+            <p className="mt-4 text-muted-foreground">
+              Revolutionizing WhatsApp Business with AI-powered chatbots and automation solutions.
+            </p>
           </div>
 
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitter
-            </a>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-bold text-lg">Product</h3>
+            <a href="#" className="text-muted-foreground hover:text-primary">AI Chatbot</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Workflows</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Integrations</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Pricing</a>
           </div>
 
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Dribbble
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Platforms</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Web
-            </a>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-bold text-lg">Resources</h3>
+            <a href="#" className="text-muted-foreground hover:text-primary">Documentation</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">API Reference</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Blog</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Case Studies</a>
           </div>
 
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Mobile
-            </a>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-bold text-lg">Company</h3>
+            <a href="#" className="text-muted-foreground hover:text-primary">About Us</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Careers</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Contact</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Partners</a>
           </div>
 
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Desktop
-            </a>
+          <div className="flex flex-col gap-2">
+            <h3 className="font-bold text-lg">Legal</h3>
+            <a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">Cookie Policy</a>
+            <a href="#" className="text-muted-foreground hover:text-primary">GDPR Compliance</a>
           </div>
         </div>
+      </div>
 
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">About</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Features
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Pricing
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              FAQ
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Youtube
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Discord
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitch
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="container pb-14 text-center">
-        <h3>
-          &copy; 2024 Landing page made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/leopoldo-miranda/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda
-          </a>
-        </h3>
-      </section>
+      <div className="container pb-14 text-center border-t border-muted-foreground/20 pt-8">
+        <p className="text-muted-foreground">
+          &copy; {new Date().getFullYear()} Juta Teknologi Sdn Bhd. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };

@@ -16,7 +16,8 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { Phone } from "lucide-react"; // Add this import
+import logo from "../assets/logo.png";
 
 interface RouteProps {
   href: string;
@@ -34,7 +35,7 @@ const routeList: RouteProps[] = [
   },
   {
     href: "#pricing",
-    label: "Pricing",
+    label: "Offer",
   },
   {
     href: "#faq",
@@ -45,41 +46,21 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
-          <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
-              <LogoIcon />
-              ShadcnUI/React
-            </a>
-          </NavigationMenuItem>
-
-          {/* mobile */}
-          <span className="flex md:hidden">
-            <ModeToggle />
-
-            <Sheet
-              open={isOpen}
-              onOpenChange={setIsOpen}
-            >
-              <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between items-center">
+          {/* Left side: Mobile menu, mode toggle, and phone number */}
+          <div className="flex items-center">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger className="lg:hidden px-2">
+                <Menu className="h-5 w-5" onClick={() => setIsOpen(true)}>
                   <span className="sr-only">Menu Icon</span>
                 </Menu>
               </SheetTrigger>
-
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl">
-                    Shadcn/React
+                    Juta Teknologi
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -108,36 +89,35 @@ export const Navbar = () => {
                 </nav>
               </SheetContent>
             </Sheet>
-          </span>
+            <ModeToggle />
+            <a href="https://wa.link/5gmtr9" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center ml-4 text-sm transition-colors hover:text-primary">
+              <Phone className="h-4 w-4 mr-2" />
+              +60 11-2167 7672
+            </a>
+          </div>
 
-          {/* desktop */}
-          <nav className="hidden md:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
-              >
-                {route.label}
-              </a>
-            ))}
-          </nav>
+          {/* Center: Logo */}
+          <NavigationMenuItem className="absolute left-1/2 transform -translate-x-1/2">
+            <a
+              rel="noreferrer noopener"
+              href="/"
+              className="font-bold text-xl flex items-center"
+            >
+              <img src={logo} alt="Logo" className="w-12 h-12" />
+            </a>
+          </NavigationMenuItem>
 
-          <div className="hidden md:flex gap-2">
+          {/* Right side: Desktop navigation */}
+          <div className="hidden lg:flex items-center space-x-4">
+           
             <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"
               target="_blank"
               className={`border ${buttonVariants({ variant: "secondary" })}`}
             >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
+              Register
             </a>
-
-            <ModeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

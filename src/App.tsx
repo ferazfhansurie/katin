@@ -10,29 +10,33 @@ import { Newsletter } from "./components/Newsletter";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
+import { SponsorsComponent } from "./components/Sponsors";
 import { Team } from "./components/Team";
 import { Testimonials } from "./components/Testimonials";
+import CursorDot from './components/CursorDot'
+import { LongLetter } from "./components/LongLetter";
+import { StepByStepGuide } from "./components/Guide";
+import { Comparison } from "./components/Comparison"
+import { ChatbotWidget } from "./components/ChatbotWidget";
 import "./App.css";
 
 function App() {
   return (
     <>
+      <CursorDot />
       <Navbar />
       <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
+      <LongLetter />
       <Pricing />
-      <Newsletter />
+      <SponsorsComponent />
+      <About />
+      <StepByStepGuide />
+      <Comparison />
       <FAQ />
+      <Cta />
       <Footer />
       <ScrollToTop />
+      <ChatbotWidget />
     </>
   );
 }
