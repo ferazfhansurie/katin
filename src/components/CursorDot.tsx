@@ -20,7 +20,7 @@ const CursorDot: React.FC = () => {
       }
     };
 
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = () => {
       if (!shooting) {
         setShooting(true);
         setShootAngle(Math.random() * 2 * Math.PI);

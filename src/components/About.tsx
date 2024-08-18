@@ -1,4 +1,3 @@
-import { Statistics } from "./Statistics";
 import pilot from "../assets/juta-team.png";
 import logo from "../assets/logo.png";
 import { Button } from "./ui/button";

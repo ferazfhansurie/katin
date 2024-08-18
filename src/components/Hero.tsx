@@ -1,5 +1,4 @@
 import { Button } from "./ui/button";
-import { useState, useEffect } from "react";
 import { AnimatedChatBubble } from "./AnimatedChatBubble";
 
 export const Hero = () => {
