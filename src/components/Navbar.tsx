@@ -12,12 +12,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { Phone } from "lucide-react"; // Add this import
+import { Phone } from "lucide-react";
 import logo from "../assets/logo.png";
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 interface RouteProps {
   href: string;
@@ -26,25 +27,45 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
     href: "#pricing",
     label: "Offer",
   },
   {
+    href: "#about",
+    label: "About",
+  },
+  {
+    href: "#guide",
+    label: "Guide",
+  },
+  {
+    href: "#compare",
+    label: "Comparison",
+  },
+
+  {
     href: "#faq",
     label: "FAQ",
+  },
+  {
+    href: "/case-studies",
+    label: "Case Studies",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navigate = useNavigate(); // Add this line
+
+  const handleNavigation = (href: string) => {
+    setIsOpen(false);
+    if (href.startsWith('/')) {
+      navigate(href);
+    } else {
+      window.location.href = href;
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -69,23 +90,13 @@ export const Navbar = () => {
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => handleNavigation(href)}
                       className={buttonVariants({ variant: "ghost" })}
                     >
                       {label}
                     </a>
                   ))}
-                  <a
-                    rel="noreferrer noopener"
-                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
-                  >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
-                  </a>
+           
                 </nav>
               </SheetContent>
             </Sheet>
@@ -109,7 +120,16 @@ export const Navbar = () => {
 
           {/* Right side: Desktop navigation */}
           <div className="hidden lg:flex items-center space-x-4">
-           
+            {routeList.map(({ href, label }: RouteProps) => (
+              <a
+                key={label}
+                href={href}
+                onClick={() => handleNavigation(href)}
+                className="text-sm transition-colors hover:text-primary"
+              >
+                {label}
+              </a>
+            ))}
             <a
               rel="noreferrer noopener"
               href="https://github.com/leoMirandaa/shadcn-landing-page.git"

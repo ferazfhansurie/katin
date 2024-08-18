@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
@@ -12,13 +13,12 @@ import { LongLetter } from "./components/LongLetter";
 import { StepByStepGuide } from "./components/Guide";
 import { Comparison } from "./components/Comparison"
 import { ChatbotWidget } from "./components/ChatbotWidget";
+import { CaseStudies } from "./components/CaseStudy";
 import "./App.css";
 
-function App() {
+function HomePage() {
   return (
     <>
-      <CursorDot />
-      <Navbar />
       <Hero />
       <LongLetter />
       <Pricing />
@@ -28,10 +28,23 @@ function App() {
       <Comparison />
       <FAQ />
       <Cta />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <CursorDot />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+      </Routes>
       <Footer />
       <ScrollToTop />
       <ChatbotWidget />
-    </>
+    </Router>
   );
 }
 

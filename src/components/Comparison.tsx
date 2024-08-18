@@ -18,19 +18,19 @@ const features = [
 
 export const Comparison: React.FC = () => {
   return (
-    <section className="container py-24 sm:py-32">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+    <section id='compare' className="container py-24 sm:py-32">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center">
         <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
           Comparison
         </span>
       </h2>
-      <p className="text-xl text-center text-muted-foreground mb-8">
+      <p className="text-lg sm:text-xl text-center text-muted-foreground mb-8">
         Explore feature breakdowns for the best value on your investment.
       </p>
       
       <Card className="w-full overflow-hidden">
         <CardHeader className="bg-muted">
-          <CardTitle className="text-2xl grid grid-cols-3">
+          <CardTitle className="text-lg sm:text-xl md:text-2xl grid grid-cols-3">
             <span>AI Solution Features</span>
             <span className="text-center">Other Tools</span>
             <span className="text-center">Our Solution</span>
@@ -38,10 +38,10 @@ export const Comparison: React.FC = () => {
         </CardHeader>
         <CardContent className="p-0">
           {features.map((feature, index) => (
-            <div key={index} className={`grid grid-cols-3 p-4 ${index % 2 === 0 ? 'bg-muted/50' : ''}`}>
-              <span className="font-medium">{feature.name}</span>
-              <span className="text-center">{feature.other}</span>
-              <span className="text-center">
+            <div key={index} className={`grid grid-cols-3 p-2 sm:p-4 ${index % 2 === 0 ? 'bg-muted/50' : ''}`}>
+              <span className="font-medium text-xs sm:text-sm md:text-base">{feature.name}</span>
+              <span className="text-center text-xs sm:text-sm md:text-base">{feature.other}</span>
+              <span className="text-center text-xs sm:text-sm md:text-base">
                 {typeof feature.our === 'boolean' ? (
                   feature.our ? <Check className="inline text-green-500" /> : <X className="inline text-red-500" />
                 ) : (
