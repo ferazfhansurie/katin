@@ -6,13 +6,13 @@ export const AnimatedChatBubble = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setVisibleBubbles(prev => (prev + 1) % 5);
-    }, 2000); // 5 seconds interval
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="absolute left-4 top-1/3 -translate-y-1/2 w-64 space-y-2">
+    <div className="space-y-2">
       {visibleBubbles > 0 && (
         <div className="chat-bubble animate-slideIn">
           <div className="bg-gray-700 text-white p-3 rounded-lg rounded-tl-none inline-block">
