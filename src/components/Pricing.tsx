@@ -24,7 +24,22 @@ interface PricingProps {
 }
 
 const pricingList: PricingProps[] = [
-
+  {
+    title: "WhatsApp Team Inbox",
+    popular: PopularPlanType.NO,
+    price: 150,
+    description: "Get started with our WhatsApp Team Inbox - perfect for teams looking to streamline their communication without the AI bells and whistles.",
+    buttonText: "Start Basic Plan",
+    benefitList: [
+      "3 WhatsApp Connections",
+      "Unlimited Messages",
+      "Team Inbox for WhatsApp",
+      "Personal WhatsApp Connection",
+      "Scan QR Code Integration",
+      "View & Update Existing Conversations",
+      "Multi-User Number Management",
+    ],
+  },
   {
     title: "AI-Powered CRM System",
     popular: PopularPlanType.YES,
@@ -48,7 +63,6 @@ const pricingList: PricingProps[] = [
       "Centralized Multi-Number Control (Manage multiple lines with ease)",
     ],
   },
-
 ];
 
 export const Pricing = () => {
@@ -60,19 +74,19 @@ export const Pricing = () => {
       <h2 className="text-3xl md:text-4xl font-bold text-center pb-8">
         Our{' '}
         <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
-           Offer
+           Offers
         </span>
       </h2>
 
-      <div className="flex justify-center">
+      <div className="flex flex-col md:flex-row justify-center gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
-            className={
+            className={`w-full md:w-1/2 max-w-md ${
               pricing.popular === PopularPlanType.YES
                 ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
                 : ""
-            }
+            }`}
           >
             <CardHeader>
               <CardTitle className="flex item-center justify-between">
