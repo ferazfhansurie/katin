@@ -5,6 +5,8 @@ import { Check, X } from 'lucide-react';
 const features = [
   { name: "Personalised AI Chatbot", other: "RM 1297 / Month", our: true },
   { name: "Personalised Workflows", other: "RM 199 / Month", our: true },
+  { name: "Multi-User Number Management", other: "Not Supported", our: true },
+  { name: "Centralized Multi-Number Control", other: "Not Supported", our: true },
   { name: "Custom Integrations", other: "RM 49 / Integration", our: true },
   { name: "Online Calendars", other: "RM 49 / Month", our: true },
   { name: "Desktop Access", other: "RM 49 / Month", our: true },
