@@ -37,7 +37,7 @@ export const About = () => {
             
               <h3 className="text-2xl font-semibold mb-4">From Humble Beginnings to AI Pioneers</h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Picture this: Two brothers in Subang, Malaysia, fueled by nothing but dreams and a whole lot of coffee, decided to turn the tech world upside down. That's us! 👋 We started as a scrappy software house, and now? We're the AI automation wizards serving over 16 happy clients (and counting)!
+                Picture this: Two brothers in Subang, Malaysia, fueled by nothing but dreams and a whole lot of coffee, decided to turn the tech world upside down. That's us! 👋 We started as a scrappy software house, and now? We're the AI automation wizards serving over 16 happy clients in first 3 months of operation (and counting)!
               </p>
               <p className="text-lg text-muted-foreground mb-6">
                 Our mission? To automate everything that moves (and even some things that don't). We're here to prove that Malaysian ingenuity can compete with the best in the world. And boy, are we having fun doing it!
@@ -60,7 +60,7 @@ export const About = () => {
                 className="w-full text-xl py-6 bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg"
                 onClick={() => window.open("https://web.jutasoftware.co/register", "_blank")}
               >
-                Hit the Damn Button
+                Hit the MAGIC Button
               </Button>
             </div>
           </div>

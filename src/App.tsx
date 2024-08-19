@@ -9,18 +9,19 @@ import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SponsorsComponent } from "./components/Sponsors";
 import CursorDot from './components/CursorDot'
-import { LongLetter } from "./components/LongLetter";
+
 import { StepByStepGuide } from "./components/Guide";
 import { Comparison } from "./components/Comparison"
 import { ChatbotWidget } from "./components/ChatbotWidget";
 import { CaseStudies } from "./components/CaseStudy";
+import { Testimonials } from "./components/Testimonials";
 import "./App.css";
 
 function HomePage() {
   return (
     <>
       <Hero />
-      <LongLetter />
+      <Testimonials />
       <Pricing />
       <SponsorsComponent />
       <About />
