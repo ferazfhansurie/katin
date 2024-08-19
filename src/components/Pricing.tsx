@@ -44,6 +44,8 @@ const pricingList: PricingProps[] = [
       "Automated Follow-Up (Like a persistent puppy, but less annoying)",
       "Chat-GPT 4.0 Answers (AI so smart, it might outsmart you)",
       "Automated Booking System (Your 24/7 appointment ninja)",
+      "Multi-User Number Management (Collaborate effortlessly)",
+      "Centralized Multi-Number Control (Manage multiple lines with ease)",
     ],
   },
 
