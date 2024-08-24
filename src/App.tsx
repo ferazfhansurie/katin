@@ -9,7 +9,6 @@ import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { SponsorsComponent } from "./components/Sponsors";
 import CursorDot from './components/CursorDot'
-
 import { StepByStepGuide } from "./components/Guide";
 import { Comparison } from "./components/Comparison"
 import { ChatbotWidget } from "./components/ChatbotWidget";
