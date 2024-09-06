@@ -14,12 +14,14 @@ import { Comparison } from "./components/Comparison"
 import { ChatbotWidget } from "./components/ChatbotWidget";
 import { CaseStudies } from "./components/CaseStudy";
 import { Testimonials } from "./components/Testimonials";
+import { ImageSection } from "./components/Image";
 import "./App.css";
 
 function HomePage() {
   return (
     <>
       <Hero />
+      <ImageSection />
       <Testimonials />
       <Pricing />
       <SponsorsComponent />

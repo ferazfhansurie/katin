@@ -45,7 +45,7 @@ const pricingList: PricingProps[] = [
     popular: PopularPlanType.YES,
     price: 688,
     description: `Ready to turn your WhatsApp chaos into a well-oiled machine? Say hello to your new digital sidekick! Our AI-Powered CRM System is like having a super-smart assistant who never sleeps, never complains, and always remembers to follow up. It's time to kiss goodbye to missed messages, forgotten follow-ups, and that nagging feeling that you're drowning in a sea of chats. With our Team Inbox, you'll be sailing smooth seas, captain! 🚀💬`,
-    buttonText: "Start Your Chaos-Free Trial",
+    buttonText: "Start Your Chaos-Free Life",
     benefitList: [
       "Unlimited Users (Yep, invite the whole crew!)",
       "Unlimited Messages (Chat till the cows come home)",
