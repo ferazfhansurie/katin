@@ -1,62 +1,70 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Instagram } from 'lucide-react';
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/700.css";
 import logo from "../assets/logo.png";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="bg-muted/50">
-      <div className="container py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
-          <div className="col-span-full xl:col-span-2">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="font-bold text-xl flex items-center"
-            >
-               <img src={logo} alt="Logo" className="w-12 h-12" />
-              Juta Teknologi
-            </a>
-            <p className="mt-4 text-muted-foreground">
-              Revolutionizing WhatsApp Business with AI-powered chatbots and automation solutions.
-            </p>
+    <footer className="bg-[#8ecb7f] text-white py-12 font-['Playfair_Display',serif]">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="flex flex-col items-start">
+            <img src={logo} alt="Katin Logo" className="w-20 h-20" />
+            <p className="mt-4 text-xl font-bold">#KNOWYOURSHEET</p>
           </div>
-
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Product</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">AI Chatbot</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Workflows</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Integrations</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Pricing</a>
+          
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About Katin', path: '/about' },
+                { name: 'Shop', path: '/shop' },
+                { name: 'Reseller', path: '/reseller' },
+                { name: 'Contact Us', path: '/contact' },
+                { name: 'Bulk Purchase', path: '/bulk-purchase' },
+                { name: 'Oeko-Tex', path: '/oeko-tex' },
+                { name: 'Threadcount', path: '/threadcount' },
+                { name: 'Egyptian Cotton', path: '/egyptian-cotton' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="hover:underline">{item.name}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Resources</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">Documentation</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">API Reference</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Blog</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Case Studies</a>
+          
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {[
+                { name: 'Terms & Conditions', path: '/terms-and-conditions' },
+                { name: 'Returns & Refunds', path: '/returns-and-refunds' },
+                { name: 'Privacy Policy', path: '/privacy-policy' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="hover:underline">{item.name}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Company</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">About Us</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Careers</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Contact</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Partners</a>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Legal</h3>
-            <a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">Cookie Policy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary">GDPR Compliance</a>
+          
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Let's Talk</h3>
+            <p>contact@katin.life</p>
+            <p>+6016-7447938</p>
+            <div className="flex space-x-4 mt-4">
+              <a href="https://www.facebook.com/Katinlife/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200">
+                <Facebook size={24} />
+              </a>
+              <a href="https://www.instagram.com/katinlife.official/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200">
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className="container pb-14 text-center border-t border-muted-foreground/20 pt-8">
-        <p className="text-muted-foreground">
-          &copy; {new Date().getFullYear()} Juta Teknologi Sdn Bhd. All rights reserved.
-        </p>
       </div>
     </footer>
   );

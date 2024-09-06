@@ -1,71 +1,97 @@
-import pilot from "../assets/juta-team.png";
-import logo from "../assets/logo.png";
-import { Button } from "./ui/button";
+import React from 'react';
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/700.css";
+import aboutImage from '../assets/about.png';
+import aboutImage1 from '../assets/about1.png';
+import aboutImage2 from '../assets/about2.png';
 
-export const About = () => {
+export const About: React.FC = () => {
   return (
-    <section
-      id="about"
-      className="container py-24 sm:py-32"
-    >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
-                  Why Choose
-                </span>{" "}
-                Juta Teknologi
-              </h2>
-      <div className="bg-muted/50 border rounded-lg py-12">
-        <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
-          <div className="flex flex-col items-center">
-          <img
-              src={logo}
-              alt="Juta Teknologi Logo"
-              className="w-32 h-auto mt-4 mb-8"
-            />
-            <div className="relative group mb-4">
-              <img
-                src={pilot}
-                alt="Support Team"
-                className="w-[500px] object-contain rounded-lg transition-all duration-300 group-hover:scale-105 z-10 relative"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            </div>
-            
-          </div>
-          <div className="flex flex-col justify-between">
-            <div className="pb-6">
-            
-              <h3 className="text-2xl font-semibold mb-4">From Humble Beginnings to AI Pioneers</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Picture this: Two brothers in Subang, Malaysia, fueled by nothing but dreams and a whole lot of coffee, decided to turn the tech world upside down. That's us! 👋 We started as a scrappy software house, and now? We're the AI automation wizards serving over 16 happy clients in first 3 months of operation (and counting)!
-              </p>
-              <p className="text-lg text-muted-foreground mb-6">
-                Our mission? To automate everything that moves (and even some things that don't). We're here to prove that Malaysian ingenuity can compete with the best in the world. And boy, are we having fun doing it!
-              </p>
-              <h3 className="text-2xl font-semibold mb-4">Our Secret Weapon: Dedicated Support Team</h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                But here's where it gets really good. We've assembled a support team so dedicated, they make superheros look lazy. These folks are the real MVPs, ensuring your AI solutions run smoother than a teh tarik on a hot day.
-              </p>
-              <ul className="space-y-2 text-lg mb-6">
-                <li>✅ 24/7 Availability (Yes, even during Raya!)</li>
-                <li>✅ Rapid Response (Faster than you can say "nasi lemak")</li>
-                <li>✅ Expert Assistance (PhDs in AI and customer satisfaction)</li>
-                <li>✅ Proactive Monitoring (We spot issues before they become "isu")</li>
-              </ul>
-              <p className="text-xl text-muted-foreground mt-6">
-                Our experts are always ready to lend a helping hand. After all, in the Juta Teknologi family, no one gets left behind!
-              </p>
-              <Button 
-                size="lg" 
-                className="w-full text-xl py-6 bg-primary transform hover:scale-105 transition-all duration-300 shadow-lg"
-                onClick={() => window.open("https://web.jutasoftware.co/register", "_blank")}
-              >
-                Hit the MAGIC Button
-              </Button>
-            </div>
-          </div>
+    <div className="font-['Playfair_Display',serif]">
+      {/* Hero section */}
+      <div className="relative h-[300px] bg-gray-800">
+        <img 
+          src={aboutImage} 
+          alt="About Us" 
+          className="w-full h-full object-cover"
+        />
+      
+      </div>
+
+      {/* Content section */}
+      <div className="container mx-auto px-4 py-16 flex">
+        <div className="w-1/2 pr-8">
+          <h2 className="text-4xl font-bold text-[#2e4c79] mb-6">The Katin Life Story</h2>
+          <p className="text-lg text-gray-700 mb-4">
+            At Katin Life, our journey began with a vision shared by 
+            three best friends who recognized a significant gap in the 
+            market. They observed that the unparalleled comfort and 
+            enduring quality of Egyptian cotton bedding were often out 
+            of reach for many customers. Fueled by a passion for 
+            delivering luxurious sleep experiences to a wider audience, 
+            they embarked on a mission to make premium bedding accessible 
+            without compromising on quality.
+          </p>
+          {/* Add more paragraphs as needed */}
+        </div>
+        <div className="w-1/2 flex justify-center items-center">
+          <img 
+            src={aboutImage1}
+            alt="Lotus Flowers" 
+            className="max-w-[80%] h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
-    </section>
+
+      {/* Quality Assurance section */}
+      <div className="container mx-auto px-4 py-16 flex">
+        <div className="w-1/2">
+          <img 
+            src={aboutImage2}
+            alt="Quality Assurance" 
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="w-1/2 pl-8">
+          <h2 className="text-4xl font-bold text-[#2e4c79] mb-6">Quality Assurance</h2>
+          <p className="text-lg text-gray-700 mb-4">
+            At the heart of Katin Life's commitment to excellence is our 
+            ownership of a state-of-the-art factory dedicated to 
+            crafting premium bedding. This hands-on approach ensures 
+            that every aspect of the production process adheres to the 
+            highest standards. We take pride in our certifications, 
+            including OKEOTEX certification, which guarantees that our 
+            products are free from harmful substances. Moreover, our 
+            ethical work certification reflects our dedication to fair 
+            labor practices, ensuring that everyone involved in the 
+            creation of our bedding is treated with respect and dignity. 
+            As part of our unwavering commitment to authenticity, our 
+            products proudly bear the Egyptian Cotton Certified label, 
+            assuring you of the genuine luxury that only Egyptian cotton 
+            can provide.
+          </p>
+        </div>
+      </div>
+       {/* Craftsmanship and Tradition section */}
+   <div className="container mx-auto px-4 py-16 flex">
+     <div className="w-2/3 pr-8">
+       <h2 className="text-4xl font-bold text-[#2e4c79] mb-6">Craftsmanship and Tradition</h2>
+       <p className="text-lg text-gray-700 mb-4">
+       Embracing the legacy of ancient Egyptian craftsmanship, Katin Life is more than a brand – it's a celebration of tradition and artistry. Our bedding is meticulously crafted with a keen attention to detail, ensuring that each piece is a testament to the timeless elegance inspired by centuries-old techniques. We honor the heritage of Egyptian cotton, infusing our products with a touch of history while creating an atmosphere of unparalleled comfort.
+
+When you choose Katin Life, you choose more than just bedding; you choose the embodiment of craftsmanship, tradition, and the pursuit of exceptional sleep.
+
+Step into the world of Katin Life, where every thread tells a story of dedication, quality, and the enduring allure of Egyptian cotton.
+       </p>
+     </div>
+     <div className="w-1/3">
+       <img 
+         src={aboutImage2}
+         alt="Craftsmanship and Tradition" 
+         className="w-full h-auto rounded-lg shadow-lg"
+       />
+     </div>
+   </div>
+    </div>
   );
 };

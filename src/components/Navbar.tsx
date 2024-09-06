@@ -1,24 +1,11 @@
 import { useState } from "react";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
-
-import { buttonVariants } from "./ui/button";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { Phone } from "lucide-react";
 import logo from "../assets/logo.png";
-import { useNavigate } from 'react-router-dom'; // Add this import
+import { useNavigate } from 'react-router-dom';
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/700.css";
 
 interface RouteProps {
   href: string;
@@ -26,119 +13,76 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#pricing",
-    label: "Offer",
-  },
-  {
-    href: "#about",
-    label: "About",
-  },
-  {
-    href: "#guide",
-    label: "Guide",
-  },
-  {
-    href: "#compare",
-    label: "Comparison",
-  },
-
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
-  {
-    href: "/case-studies",
-    label: "Case Studies",
-  },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/shop", label: "Shop" },
+  { href: "/reseller", label: "Reseller" },
+  { href: "/contact", label: "Contact" },
+  { href: "/oeko-tex", label: "Oeko-Tex" },
+  { href: "/threadcount", label: "Threadcount" },
+  { href: "/egyptian-cotton", label: "Egyptian Cotton" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const navigate = useNavigate(); // Add this line
+  const navigate = useNavigate();
 
   const handleNavigation = (href: string) => {
     setIsOpen(false);
-    if (href.startsWith('/')) {
-      navigate(href);
-    } else {
-      window.location.href = href;
-    }
+    navigate(href);
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky top-0 z-40 w-full bg-[#8ecb7f] text-white font-['Playfair_Display',serif]">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between items-center">
-          {/* Left side: Mobile menu, mode toggle, and phone number */}
-          <div className="flex items-center">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger className="lg:hidden px-2">
-                <Menu className="h-5 w-5" onClick={() => setIsOpen(true)}>
-                  <span className="sr-only">Menu Icon</span>
-                </Menu>
-              </SheetTrigger>
-              <SheetContent side={"left"}>
-                <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Juta Teknologi
-                  </SheetTitle>
-                </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, label }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
-                      key={label}
-                      href={href}
-                      onClick={() => handleNavigation(href)}
-                      className={buttonVariants({ variant: "ghost" })}
-                    >
-                      {label}
-                    </a>
-                  ))}
-           
-                </nav>
-              </SheetContent>
-            </Sheet>
-            <ModeToggle />
-            <a href="https://wa.link/5gmtr9" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center ml-4 text-sm transition-colors hover:text-primary">
-              <Phone className="h-4 w-4 mr-2" />
-              +60 11-2167 7672
-            </a>
-          </div>
-
-          {/* Center: Logo */}
-          <NavigationMenuItem className="absolute left-1/2 transform -translate-x-1/2">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="font-bold text-xl flex items-center"
-            >
-              <img src={logo} alt="Logo" className="w-12 h-12" />
+        <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between items-center">
+          {/* Left side: Logo */}
+          <NavigationMenuItem>
+            <a href="/" className="font-bold text-xl flex items-center">
+              <img src={logo} alt="Katin Life" className="h-8 mr-2" />
+              <span>Katin Life</span>
             </a>
           </NavigationMenuItem>
 
-          {/* Right side: Desktop navigation */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Center: Desktop navigation */}
+          <div className="hidden lg:flex items-center space-x-6">
             {routeList.map(({ href, label }: RouteProps) => (
               <a
                 key={label}
                 href={href}
-                onClick={() => handleNavigation(href)}
-                className="text-sm transition-colors hover:text-primary"
+                onClick={(e) => { e.preventDefault(); handleNavigation(href); }}
+                className="text-sm font-medium transition-colors hover:text-green-200"
               >
                 {label}
               </a>
             ))}
-            <a
-              rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
-            >
-              Register
-            </a>
           </div>
+
+      
+
+          {/* Mobile menu */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger className="lg:hidden">
+              <Menu className="h-6 w-6" />
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-[#8ecb7f] text-white">
+              <SheetHeader>
+                <SheetTitle className="font-bold text-xl text-white">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-8">
+                {routeList.map(({ href, label }: RouteProps) => (
+                  <a
+                    key={label}
+                    href={href}
+                    onClick={(e) => { e.preventDefault(); handleNavigation(href); }}
+                    className="text-lg font-medium"
+                  >
+                    {label}
+                  </a>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
