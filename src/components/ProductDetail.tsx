@@ -14,6 +14,11 @@ import ss1 from '../assets/ss1.png';
 import ss2 from '../assets/ss2.png';
 import ss3 from '../assets/ss3.png';
 import ss4 from '../assets/ss4.png';
+import product4 from "../assets/product4.png"; // You'll need to import this
+import product5 from "../assets/product5.png"; // You'll need to import this
+import product6 from "../assets/product6.png"; // You'll need to import this
+import product7 from "../assets/product7.png"; // You'll need to import this
+import product8 from "../assets/product8.png"; // You'll need to import this
 
 
 import "@fontsource/playfair-display/400.css";
@@ -21,19 +26,62 @@ import "@fontsource/playfair-display/700.css";
 
 const products = {
   'snow-white': {
-    title: 'Snow White',
-    description: `The Snow White Bedset, made from luxurious Egyptian cotton, offers an unparalleled blend of opulence and comfort. Its long-staple fibers create a silky, breathable fabric that transforms your bed into a haven of tranquility. What sets it apart is its Oeko-Tex certification, ensuring that every component is free from harmful substances. This commitment to environmental responsibility adds a layer of assurance to the already lavish experience. The crisp, clean white design complements any decor, making it a timeless choice that aligns with your values. The Snow White Bedset isn't just bedding; it's a statement of elegance and conscientious living.`,
+    title: 'Snow White Bedset',
+    description: `Elevate your sleep experience with our Snow White Bedset, crafted from the finest Egyptian cotton. The long-staple fibers create an incredibly soft, breathable fabric that ensures comfort night after night. Known for its durability and smooth texture, this bedset brings a touch of hotel-like luxury to your home.
+
+What sets it apart is its Oeko-Tex certification, meaning it's free from harmful chemicals, giving you peace of mind about its safety for both you and the environment. The timeless crisp white design fits effortlessly into any bedroom decor, adding a fresh and clean aesthetic.
+
+With the Snow White Bedset, you're not just buying bedding—you're investing in a lifestyle of comfort, elegance, and eco-conscious living.`,
     images: [sw1, sw2, sw3, sw4],
   },
   'deep-grey': {
-    title: 'Deep Grey',
-    description: `Elevate your bedroom aesthetic with the Deep Grey Bedset, meticulously designed for a perfect blend of sophistication and comfort. The deep grey egyptian cotton fabric, chosen for its timeless elegance, adds a chic and versatile touch to your space. Experience the luxurious softness of this bedset, transforming your bedtime routine into an indulgent experience. With a cooling sensation, it ensures a tranquil night's sleep, making it ideal for those seeking a refreshing repose. Committed to quality and sustainability, the Deep Grey Bedset proudly holds Oeko-Tex certification, providing a bedding choice that is not only stylish but also free from harmful substances.`,
+    title: 'Deep Grey Bedset',
+    description: `The Deep Grey Bedset offers a perfect mix of modern design and cozy comfort. Made from premium Egyptian cotton, it boasts a soft, breathable fabric that feels as good as it looks. The rich grey hue provides a versatile, minimalist aesthetic that suits any bedroom style.
+
+Certified by Oeko-Tex, this bedset is free from harmful chemicals, ensuring a safe, eco-conscious sleep environment. The Deep Grey Bedset is the ultimate choice for those who love clean lines, modern design, and unmatched comfort.`,
     images: [dg1, dg2, dg3, dg4],
   },
   'silver-smoke': {
-    title: 'Silver Smoke',
-    description: `Experience the epitome of modern luxury with the Silver Smoke Bedset, meticulously crafted from exquisite Egyptian cotton. The silver smoke color, chosen for its contemporary allure, effortlessly blends into diverse decor styles, imparting a versatile and chic ambiance to your bedroom. Revel in the opulence of its plush fabric, as the Egyptian cotton ensures a sumptuously soft touch for an indulgent nightly experience. Designed for a tranquil night's sleep, the Silver Smoke Bedset features a cooling sensation, catering to those who seek both style and comfort. With Oeko-Tex certification, this bedset proudly upholds rigorous standards, guaranteeing it is free from harmful substances.`,
+    title: 'Silver Smoke Bedset',
+    description: `Discover refined luxury with our Silver Smoke Bedset, crafted from the highest quality Egyptian cotton. Its soft, silky fabric drapes effortlessly, offering both comfort and style. The elegant silver-grey tone adds a contemporary touch to any bedroom, balancing between modern chic and timeless design.
+
+This bedset is also Oeko-Tex certified, ensuring it's free from harmful chemicals and safe for both your family and the environment. The Silver Smoke Bedset is perfect for those who value subtle elegance and high-end comfort.`,
     images: [ss1, ss2, ss3, ss4],
+  },
+  'aqua-dew': {
+    title: 'Aqua Dew Bedset',
+    description: `Transform your bedroom into a serene retreat with the Aqua Dew Bedset. Made from premium Egyptian cotton, its luxurious softness and breathability will make every night feel like a getaway. The light, refreshing aqua shade brings a calming vibe that soothes the senses and refreshes your decor.
+
+Certified by Oeko-Tex, this bedset is free from harmful chemicals, so you can rest easy knowing you're making a safe and sustainable choice. The Aqua Dew Bedset is perfect for those who seek both style and comfort in their sleep space.`,
+    images: [product6],
+  },
+  'pearl-beige': {
+    title: 'Pearl Beige Bedset',
+    description: `Embrace the warmth of the Pearl Beige Bedset, a perfect blend of luxury and comfort. Crafted from fine Egyptian cotton, this bedset offers a silky, breathable feel that enhances your sleep experience. The soft beige tone adds a cozy and inviting touch to any bedroom, pairing well with both modern and classic decor.
+
+With its Oeko-Tex certification, you can trust that it's free from harmful substances, making it a safe, eco-friendly choice. The Pearl Beige Bedset is ideal for those who appreciate understated elegance with uncompromised quality.`,
+    images: [product5],
+  },
+  'almond-latte': {
+    title: 'Almond Latte Bedset',
+    description: `Wrap yourself in the soft embrace of the Almond Latte Bedset, made from luxurious Egyptian cotton. The gentle, creamy almond hue creates a warm and inviting ambiance, perfect for a cozy bedroom atmosphere. This bedset's silky texture and breathable fabric deliver exceptional comfort night after night.
+
+With its Oeko-Tex certification, the Almond Latte Bedset ensures both safety and sustainability, making it the perfect choice for those who want a soft, neutral look with a focus on quality and eco-conscious living.`,
+    images: [product7],
+  },
+  'midnight-black': {
+    title: 'Midnight Black Bedset',
+    description: `Make a statement with the Midnight Black Bedset, crafted from luxurious Egyptian cotton. Its smooth, ultra-soft texture offers unparalleled comfort, while the deep black color exudes modern sophistication. This bold and elegant bedset is perfect for creating a striking contrast in your bedroom decor.
+
+Oeko-Tex certified for a chemical-free guarantee, the Midnight Black Bedset ensures both style and safety. Elevate your sleep with this sleek and sophisticated choice that combines comfort with an edge.`,
+    images: [product4],
+  },
+  'eco-luxe-bath-towel': {
+    title: 'Eco-Luxe Bath Towel',
+    description: `Upgrade your bath experience with the Eco-Luxe Bath Towel, crafted from premium, eco-friendly materials. Its plush, absorbent texture provides a spa-like feel, while the pure white color adds a touch of timeless elegance to your bathroom.
+
+This towel is Oeko-Tex certified, ensuring it's free from harmful chemicals and gentle on your skin. With its luxurious softness and sustainable production, the Eco-Luxe Bath Towel is perfect for those who want a high-end, eco-conscious addition to their daily routine.`,
+    images: [product8],
   },
 };
 
@@ -62,12 +110,7 @@ export const ProductDetail: React.FC = () => {
   return (
     <div className="font-['Playfair_Display',serif]">
       <div className="container mx-auto px-4 py-8">
-        <div className="text-sm breadcrumbs mb-4">
-          <ul>
-            <li><a href="/">Home</a></li> 
-            <li>Egyptian Cotton Bedsheet</li>
-          </ul>
-        </div>
+        
         <div className="flex flex-wrap -mx-4">
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <img src={currentImage} alt={product.title} className="w-full h-auto rounded-lg shadow-lg mb-4" />

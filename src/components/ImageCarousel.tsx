@@ -30,35 +30,35 @@ export const ImageCarousel: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-gray-100">
-      <div className="w-full max-w-7xl mx-auto px-4 py-16">
-        <div className="relative overflow-hidden rounded-3xl shadow-xl" style={{ paddingTop: '66.67%' }}>
-          <button onClick={prevSlide} className="absolute left-6 top-1/2 transform -translate-y-1/2 text-5xl z-10 text-white bg-black/30 rounded-full p-3 hover:bg-black/50 transition-colors">
-            <ChevronLeft />
+    <section className="relative w-full bg-gray-100 py-12"> {/* Increased vertical padding */}
+      <div className="w-full max-w-4xl mx-auto px-4">
+        <div className="relative rounded-2xl overflow-hidden shadow-lg"> {/* Added shadow for separation */}
+          <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/30 rounded-full p-2 hover:bg-black/50 transition-colors">
+            <ChevronLeft size={24} />
           </button>
           <div 
-            className="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out" 
+            className="flex transition-transform duration-500 ease-in-out" 
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {images.map((img, index) => (
-              <div key={index} className="w-full h-full flex-shrink-0">
+              <div key={index} className="w-full flex-shrink-0">
                 <img 
                   src={img} 
                   alt={`Slide ${index + 1}`} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto"
                 />
               </div>
             ))}
           </div>
-          <button onClick={nextSlide} className="absolute right-6 top-1/2 transform -translate-y-1/2 text-5xl z-10 text-white bg-black/30 rounded-full p-3 hover:bg-black/50 transition-colors">
-            <ChevronRight />
+          <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/30 rounded-full p-2 hover:bg-black/50 transition-colors">
+            <ChevronRight size={24} />
           </button>
           
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {images.map((_, index) => (
               <span 
                 key={index} 
-                className={`h-3 w-3 rounded-full ${index === currentSlide ? 'bg-white' : 'bg-gray-400'} transition-colors`}
+                className={`h-2 w-2 rounded-full ${index === currentSlide ? 'bg-white' : 'bg-gray-400'} transition-colors`}
               />
             ))}
           </div>
@@ -66,7 +66,7 @@ export const ImageCarousel: React.FC = () => {
       </div>
       
       {/* Full-width banners */}
-      <div className="w-full">
+      <div className="w-full py-10">
         {banners.map((banner, index) => (
           <div key={index} className="w-full">
             <img 

@@ -37,25 +37,26 @@ export const Hero = () => {
 
   return (
     <section className="relative w-full font-['Playfair_Display',serif]">
-      <div className="relative h-[calc(65vh-64px)] overflow-hidden">
-        <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 text-4xl z-10 text-white bg-black/30 rounded-full p-2">
-          <ChevronLeft />
+      <div className="relative w-full h-0 pb-[56.25%] lg:h-[500px] lg:pb-0 overflow-hidden">
+        <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/30 rounded-full p-2">
+          <ChevronLeft size={24} />
         </button>
         <div 
-            className="flex transition-transform duration-500 ease-in-out h-full" 
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {images.map((img, index) => (
+          className="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out" 
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {images.map((img, index) => (
+            <div key={index} className="w-full h-full flex-shrink-0">
               <img 
-                key={index}
                 src={img} 
                 alt={`Slide ${index + 1}`} 
-                className="w-full h-full object-cover flex-shrink-0"
+                className="w-full h-full object-cover"
               />
-            ))}
-          </div>
-        <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 text-4xl z-10 text-white bg-black/30 rounded-full p-2">
-          <ChevronRight />
+            </div>
+          ))}
+        </div>
+        <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/30 rounded-full p-2">
+          <ChevronRight size={24} />
         </button>
         
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -70,15 +71,15 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 mt-8">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
           {productFeatures.map((feature, index) => (
             <div key={index} className="text-center">
               <img 
                 src={feature.image} 
                 alt={feature.title} 
-                className="w-45 h-45 object-contain mx-auto mb-4" 
+                className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain mx-auto mb-2 sm:mb-4" 
               />
-              <h4 className="text-[#2e4c79] font-bold text-xl">
+              <h4 className="text-[#2e4c79] font-bold text-xs sm:text-sm md:text-xl">
                 {feature.title}
               </h4>
             </div>
