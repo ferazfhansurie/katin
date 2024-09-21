@@ -139,13 +139,13 @@ export const ProductDetail: React.FC = () => {
         <div className="flex flex-wrap -mx-4">
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
             <img src={currentImage} alt={product.title} className="w-full h-auto rounded-lg shadow-lg mb-4" />
-            <div className="flex space-x-2">
+            <div className="flex justify-between">
               {product.images.map((img: string, index: number) => (
                 <img 
                   key={index}
                   src={img} 
                   alt={`${product.title} ${index + 1}`} 
-                  className="w-24 h-24 object-cover cursor-pointer rounded-md"
+                  className="w-16 h-16 md:w-24 md:h-24 object-cover cursor-pointer rounded-md"
                   onClick={() => setCurrentImage(img)}
                 />
               ))}
