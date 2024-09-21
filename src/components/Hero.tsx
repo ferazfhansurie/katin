@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import hero from "../assets/hero.png";
 import hero2 from "../assets/hero2.png";
 import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";
@@ -20,7 +21,7 @@ const productFeatures = [
 
 export const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [hero, hero2, hero3];
+  const images = [hero, hero2, hero3, hero4];
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -37,7 +38,7 @@ export const Hero = () => {
 
   return (
     <section className="relative w-full font-['Playfair_Display',serif]">
-      <div className="relative w-full h-0 pb-[56.25%] lg:h-[500px] lg:pb-0 overflow-hidden">
+      <div className="relative w-full h-0 pb-[75%] lg:h-[700px] lg:pb-0 overflow-hidden">
         <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white bg-black/30 rounded-full p-2">
           <ChevronLeft size={24} />
         </button>
@@ -70,18 +71,15 @@ export const Hero = () => {
         
       </div>
       
-      <div className="container mx-auto px-4 mt-8">
+      <div className="container mx-auto px-4 mt-4 sm:mt-8">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
           {productFeatures.map((feature, index) => (
             <div key={index} className="text-center">
               <img 
                 src={feature.image} 
                 alt={feature.title} 
-                className="w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 object-contain mx-auto mb-2 sm:mb-4" 
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain mx-auto" 
               />
-              <h4 className="text-[#2e4c79] font-bold text-xs sm:text-sm md:text-xl">
-                {feature.title}
-              </h4>
             </div>
           ))}
         </div>

@@ -2,14 +2,14 @@
 import Slider from 'react-slick';
 import { ProductCard } from './ProductCard';
 import { Link } from 'react-router-dom'; // Add this import
-import product1 from "../assets/product1.png";
-import product2 from "../assets/product2.png";
-import product3 from "../assets/product3.png";
-import product4 from "../assets/product4.png"; // You'll need to import this
-import product5 from "../assets/product5.png"; // You'll need to import this
-import product6 from "../assets/product6.png"; // You'll need to import this
-import product7 from "../assets/product7.png"; // You'll need to import this
-import product8 from "../assets/product8.png"; // You'll need to import this
+import product1 from "../assets/products1.png";
+import product2 from "../assets/products2.png";
+import product3 from "../assets/products3.png";
+import product4 from "../assets/products4.png"; // You'll need to import this
+import product5 from "../assets/products5.png"; // You'll need to import this
+import product6 from "../assets/products6.png"; // You'll need to import this
+import product7 from "../assets/products7.png"; // You'll need to import this
+import product8 from "../assets/products8.png"; // You'll need to import this
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
