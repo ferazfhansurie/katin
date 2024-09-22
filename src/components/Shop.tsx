@@ -5,10 +5,7 @@ import product1 from "../assets/product1.png";
 import product2 from "../assets/product2.png";
 import product3 from "../assets/product3.png";
 import { WhatsAppSection } from './WhatsAppSection';
-import feature1 from "../assets/shopf1.png";
-import feature2 from "../assets/shopf2.png";
-import feature3 from "../assets/shopf3.png";
-import feature4 from "../assets/shopf4.png";
+
 
 import "@fontsource/playfair-display/400.css";
 import "@fontsource/playfair-display/700.css";
@@ -74,12 +71,7 @@ const products = [
   },
 ];
 
-const productFeatures = [
-  { image: feature1, title: "EGYPTIAN COTTON" },
-  { image: feature2, title: "HIGH THREAD COUNT" },
-  { image: feature3, title: "OEKO-TEX CERTIFIED" },
-  { image: feature4, title: "CHEMICAL FREE" },
-];
+
 
 export const Shop: React.FC = () => {
   return (
