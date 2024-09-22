@@ -45,9 +45,10 @@ const products = [
   {
     image: product5, // You'll need to import this
 
-    title: 'Pearl Beige',
-    description: 'Warm, soft, timeless',
-    slug: 'pearl-beige'
+
+    title: 'Almond Latte',
+    description: 'Creamy, serene, relaxing',
+    slug: 'almond-latte'
   },
   {
     image: product6, // You'll need to import this
@@ -60,9 +61,9 @@ const products = [
   {
     image: product7, // You'll need to import this
 
-    title: 'Almond Latte',
-    description: 'Creamy, serene, relaxing',
-    slug: 'almond-latte'
+    title: 'Pearl Beige',
+    description: 'Warm, soft, timeless',
+    slug: 'pearl-beige'
   },
   {
     image: product8, // You'll need to import this

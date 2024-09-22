@@ -41,27 +41,30 @@ const products = [
   },
   {
     image: product4,
-    title: 'Aqua Dew',
-    description: 'Fresh, serene, tranquil',
-    slug: 'aqua-dew'
+    title: 'Midnight Black',
+    description: 'Dark, dramatic, powerful',
+    slug: 'midnight-black'
+
   },
   {
     image: product5,
-    title: 'Pearl Beige',
-    description: 'Warm, soft, timeless',
-    slug: 'pearl-beige'
-  },
-  {
-    image: product6,
+
     title: 'Almond Latte',
     description: 'Creamy, serene, relaxing',
     slug: 'almond-latte'
   },
   {
+    image: product6,
+    title: 'Aqua Dew',
+    description: 'Fresh, serene, tranquil',
+    slug: 'aqua-dew'
+
+  },
+  {
     image: product7,
-    title: 'Midnight Black',
-    description: 'Dark, dramatic, powerful',
-    slug: 'midnight-black'
+    title: 'Pearl Beige',
+    description: 'Warm, soft, timeless',
+    slug: 'pearl-beige'
   },
   {
     image: product8,
@@ -101,20 +104,7 @@ export const Shop: React.FC = () => {
       </section>
       <WhatsAppSection />
       <div className="container mx-auto px-4 mt-8 pt-12 pb-16 py-12 ">
-  <div className="grid grid-cols-4 gap-8">
-    {productFeatures.map((feature, index) => (
-      <div key={index} className="text-center">
-        <img 
-          src={feature.image} 
-          alt={feature.title} 
-          className="w-45 h-45 object-contain mx-auto mb-4" 
-        />
-        <h4 className="text-[#2e4c79] font-bold text-xl">
-          {feature.title}
-        </h4>
-      </div>
-    ))}
-  </div>
+
 </div>
     </div>
   );

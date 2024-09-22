@@ -82,14 +82,15 @@ Certified by Oeko-Tex, this bedset is free from harmful chemicals, so you can re
     description: `Embrace the warmth of the Pearl Beige Bedset, a perfect blend of luxury and comfort. Crafted from fine Egyptian cotton, this bedset offers a silky, breathable feel that enhances your sleep experience. The soft beige tone adds a cozy and inviting touch to any bedroom, pairing well with both modern and classic decor.
 
 With its Oeko-Tex certification, you can trust that it's free from harmful substances, making it a safe, eco-friendly choice. The Pearl Beige Bedset is ideal for those who appreciate understated elegance with uncompromised quality.`,
-    images: [pb1, pb2, pb3, pb4, pb5],
+ 
+    images: [al1, al2, al3, al4, al5],
   },
   'almond-latte': {
     title: 'Almond Latte Bedset',
     description: `Wrap yourself in the soft embrace of the Almond Latte Bedset, made from luxurious Egyptian cotton. The gentle, creamy almond hue creates a warm and inviting ambiance, perfect for a cozy bedroom atmosphere. This bedset's silky texture and breathable fabric deliver exceptional comfort night after night.
 
 With its Oeko-Tex certification, the Almond Latte Bedset ensures both safety and sustainability, making it the perfect choice for those who want a soft, neutral look with a focus on quality and eco-conscious living.`,
-    images: [al1, al2, al3, al4, al5],
+images: [pb1, pb2, pb3, pb4, pb5],
   },
   'midnight-black': {
     title: 'Midnight Black Bedset',
@@ -222,101 +223,103 @@ export const ProductDetail: React.FC = () => {
       <div className="mt-16 pb-20">
         <WhatsAppSection />
       </div>
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold text-[#2e4c79] mb-12 text-center">Our Sizes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Bedsheets</h3>
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-[#f0f4f8]">
-                  <th className="border p-2 text-left">Size</th>
-                  <th className="border p-2 text-left">Length</th>
-                  <th className="border p-2 text-left">Width</th>
-                  <th className="border p-2 text-left">Height</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border p-2">King</td>
-                  <td className="border p-2">193cm</td>
-                  <td className="border p-2">183cm</td>
-                  <td className="border p-2">40cm</td>
-                </tr>
-                <tr>
-                  <td className="border p-2">Queen</td>
-                  <td className="border p-2">193cm</td>
-                  <td className="border p-2">153cm</td>
-                  <td className="border p-2">40cm</td>
-                </tr>
-                <tr>
-                  <td className="border p-2">Single</td>
-                  <td className="border p-2">193cm</td>
-                  <td className="border p-2">94cm</td>
-                  <td className="border p-2">40cm</td>
-                </tr>
-              </tbody>
-            </table>
-          
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Duvet Cover</h3>
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-[#f0f4f8]">
-                  <th className="border p-2 text-left">Size</th>
-                  <th className="border p-2 text-left">Length</th>
-                  <th className="border p-2 text-left">Width</th>
-                  <th className="border p-2 text-left">Height</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border p-2">King</td>
-                  <td className="border p-2">240cm</td>
-                  <td className="border p-2">210cm</td>
-                  <td className="border p-2">-</td>
-                </tr>
-                <tr>
-                  <td className="border p-2">Queen</td>
-                  <td className="border p-2">210cm</td>
-                  <td className="border p-2">210cm</td>
-                  <td className="border p-2">-</td>
-                </tr>
-                <tr>
-                  <td className="border p-2">Single</td>
-                  <td className="border p-2">153cm</td>
-                  <td className="border p-2">210cm</td>
-                  <td className="border p-2">-</td>
-                </tr>
-              </tbody>
-            </table>
-          
-          </div>
-          <div>
-            <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Pillow Case</h3>
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-[#f0f4f8]">
-                  <th className="border p-2 text-left">Size</th>
-                  <th className="border p-2 text-left">Length</th>
-                  <th className="border p-2 text-left">Width</th>
-                  <th className="border p-2 text-left">Height</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border p-2">Standard</td>
-                  <td className="border p-2">50cm</td>
-                  <td className="border p-2">75cm</td>
-                  <td className="border p-2">26cm</td>
-                </tr>
-              </tbody>
-            </table>
-           
+      {product.title !== 'Eco-Luxe Bath Towel' && (
+        <div className="container mx-auto px-4 py-12">
+          <h2 className="text-4xl font-bold text-[#2e4c79] mb-12 text-center">Our Sizes</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Bedsheets</h3>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[#f0f4f8]">
+                    <th className="border p-2 text-left">Size</th>
+                    <th className="border p-2 text-left">Length</th>
+                    <th className="border p-2 text-left">Width</th>
+                    <th className="border p-2 text-left">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-2">King</td>
+                    <td className="border p-2">193cm</td>
+                    <td className="border p-2">183cm</td>
+                    <td className="border p-2">40cm</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Queen</td>
+                    <td className="border p-2">193cm</td>
+                    <td className="border p-2">153cm</td>
+                    <td className="border p-2">40cm</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Single</td>
+                    <td className="border p-2">193cm</td>
+                    <td className="border p-2">94cm</td>
+                    <td className="border p-2">40cm</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Duvet Cover</h3>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[#f0f4f8]">
+                    <th className="border p-2 text-left">Size</th>
+                    <th className="border p-2 text-left">Length</th>
+                    <th className="border p-2 text-left">Width</th>
+                    <th className="border p-2 text-left">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-2">King</td>
+                    <td className="border p-2">240cm</td>
+                    <td className="border p-2">210cm</td>
+                    <td className="border p-2">-</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Queen</td>
+                    <td className="border p-2">210cm</td>
+                    <td className="border p-2">210cm</td>
+                    <td className="border p-2">-</td>
+                  </tr>
+                  <tr>
+                    <td className="border p-2">Single</td>
+                    <td className="border p-2">153cm</td>
+                    <td className="border p-2">210cm</td>
+                    <td className="border p-2">-</td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-[#2e4c79] mb-4">Pillow Case</h3>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[#f0f4f8]">
+                    <th className="border p-2 text-left">Size</th>
+                    <th className="border p-2 text-left">Length</th>
+                    <th className="border p-2 text-left">Width</th>
+                    <th className="border p-2 text-left">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border p-2">Standard</td>
+                    <td className="border p-2">50cm</td>
+                    <td className="border p-2">75cm</td>
+                    <td className="border p-2">26cm</td>
+                  </tr>
+                </tbody>
+              </table>
+             
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
