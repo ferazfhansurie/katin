@@ -4,10 +4,14 @@ import { Facebook, Instagram } from 'lucide-react';
 import "@fontsource/playfair-display/400.css";
 import "@fontsource/playfair-display/700.css";
 import logo from "../assets/logo.png";
+import headerBackground from "../assets/header.png";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#8ecb7f] text-white py-12 font-['Playfair_Display',serif]">
+    <footer 
+      className="text-white py-12 font-['Playfair_Display',serif] bg-cover bg-center"
+      style={{ backgroundImage: `url(${headerBackground})` }}
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-start">

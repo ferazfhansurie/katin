@@ -3,6 +3,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/compon
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "../assets/logo.png";
+import headerBackground from "../assets/header.png";
 import { useNavigate } from 'react-router-dom';
 import "@fontsource/playfair-display/400.css";
 import "@fontsource/playfair-display/700.css";
@@ -33,7 +34,14 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#8ecb7f] text-white font-['Playfair_Display',serif]">
+    <header 
+      className="sticky top-0 z-40 w-full text-white font-['Playfair_Display',serif]"
+      style={{
+        backgroundImage: `url(${headerBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-16 px-4 w-screen flex justify-between items-center">
           {/* Left side: Logo */}
