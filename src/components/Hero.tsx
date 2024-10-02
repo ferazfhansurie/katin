@@ -22,7 +22,7 @@ const productFeatures = [
 export const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [hero, hero2, hero3, hero4];
-
+//
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length);
   };
