@@ -26,15 +26,16 @@ const products = [
   },
   {
     image: product2,
-    title: 'Deep Grey',
-    description: 'Dark, muted, elegant',
-    slug: 'deep-grey'
-  },
-  {
-    image: product3,
     title: 'Silver Smoke',
     description: 'Misty, metallic, subtle',
     slug: 'silver-smoke'
+
+  },
+  {
+    image: product3,
+    title: 'Deep Grey',
+    description: 'Dark, muted, elegant',
+    slug: 'deep-grey'
   },
   {
     image: product4,
