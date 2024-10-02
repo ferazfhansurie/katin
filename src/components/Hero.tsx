@@ -72,13 +72,13 @@ export const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 mt-4 sm:mt-8">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-2 gap-x-4 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-4 sm:gap-y-2 gap-x-4 sm:gap-8">
           {productFeatures.map((feature, index) => (
             <div key={index} className="text-center">
               <img 
                 src={feature.image} 
                 alt={feature.title} 
-                className="w-64 h-64 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain mx-auto" 
+                className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-contain mx-auto" 
               />
             </div>
           ))}

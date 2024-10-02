@@ -14,12 +14,14 @@ export const Footer: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex flex-col items-start">
+          {/* Center align content on mobile */}
+          <div className="flex flex-col items-center md:items-start">
             <img src={logo} alt="Katin Logo" className="w-20 h-20" />
             <p className="mt-4 text-xl font-bold">#KNOWYOURSHEET</p>
           </div>
           
-          <div>
+          {/* Center align content on mobile */}
+          <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-4">Company</h3>
             <ul className="space-y-2">
               {[
@@ -40,7 +42,8 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
+          {/* Center align content on mobile */}
+          <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-4">Legal</h3>
             <ul className="space-y-2">
               {[
@@ -55,11 +58,13 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           
-          <div>
+          {/* Center align content on mobile */}
+          <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-4">Let's Talk</h3>
             <p>contact@katin.life</p>
             <p>+6016-7447938</p>
-            <div className="flex space-x-4 mt-4">
+            {/* Center align social icons on mobile */}
+            <div className="flex justify-center md:justify-start space-x-4 mt-4">
               <a href="https://www.facebook.com/Katinlife/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200">
                 <Facebook size={24} />
               </a>
