@@ -66,14 +66,20 @@ export const Navbar = () => {
             ))}
           </div>
 
-      
-
           {/* Mobile menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger className="lg:hidden">
               <Menu className="h-6 w-6" />
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[#8ecb7f] text-white">
+            <SheetContent 
+              side="right" 
+              className="bg-transparent"
+              style={{
+                backgroundImage: `url(${headerBackground})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
               <SheetHeader>
                 <SheetTitle className="font-bold text-xl text-white">Menu</SheetTitle>
               </SheetHeader>
@@ -83,7 +89,7 @@ export const Navbar = () => {
                     key={label}
                     href={href}
                     onClick={(e) => { e.preventDefault(); handleNavigation(href); }}
-                    className="text-lg font-medium"
+                    className="text-lg font-medium text-white hover:text-green-200"
                   >
                     {label}
                   </a>

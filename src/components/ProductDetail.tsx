@@ -115,6 +115,9 @@ export const ProductDetail: React.FC = () => {
   const [product, setProduct] = useState<any>(null);
 
   useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
     if (slug && products[slug as keyof typeof products]) {
       setProduct(products[slug as keyof typeof products]);
       setCurrentImage(products[slug as keyof typeof products].images[0]);
